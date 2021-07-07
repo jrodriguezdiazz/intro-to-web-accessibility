@@ -64,7 +64,7 @@
       <section>
         <h2 class="header" id="my-projects">My Projects</h2>
         <div class="carousel">
-          <div class="arrow arrow-left"></div>
+          <div class="arrow arrow-left" aria-label="Backward button"></div>
           <div class="window">
             <ul class="project-container">
               <li>
@@ -94,7 +94,7 @@
                   />
                 </button>
               </li>
-              <li>
+              <li aria-hidden="true">
                 <button>
                   <img
                     class="project project4"
@@ -103,7 +103,7 @@
                   />
                 </button>
               </li>
-              <li>
+              <li aria-hidden="true">
                 <button>
                   <img
                     class="project project5"
@@ -114,7 +114,7 @@
               </li>
             </ul>
           </div>
-          <div class="arrow arrow-right"></div>
+          <div class="arrow arrow-right" aria-label="Forward button"></div>
         </div>
       </section>
     </main>
@@ -123,19 +123,34 @@
       <h2 class="header">Contacto</h2>
       <form class="form-container">
         <label for="Name">Name</label>
-        <input name="Name" type="text" placeholder="Name" autocomplete="name" />
+        <input
+          required
+          name="Name"
+          type="text"
+          placeholder="Name"
+          autocomplete="name"
+          aria-label="Input to enter the name"
+        />
         <br />
         <label for="Email">Email</label>
         <input
+          required
           name="Email"
           type="text"
           placeholder="Email"
           autocomplete="email"
+          aria-label="Input to enter the email"
         />
         <br />
         <div class="message-input">
           <label for="Body">Body</label>
-          <input type="text" name="Body" /> <br />
+          <input
+            required
+            type="text"
+            name="Body"
+            aria-label="Input to enter the body of the message"
+          />
+          <br />
         </div>
         <div class="send-button">Send</div>
       </form>
